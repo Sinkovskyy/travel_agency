@@ -1,0 +1,79 @@
+
+
+// Change item color when item is active or hovered
+@mixin activeColor($color)
+{
+    .active,a:hover
+    {
+        color: $color;
+    }
+}
+
+
+.navbar
+{
+    position:absolute;
+    display:grid;
+    width: 100%;
+    height: 70px;
+    grid-template-columns: 40% 70%;
+    color:$white;
+
+
+    .logo
+    {
+        color:$white;
+        text-align: center;
+        align-self: center;
+        font-size: 15pt;
+        font-weight: bold;
+    }
+
+    .nav-items
+    {
+        display: flex;
+        justify-content: flex-start;
+        width: 80%;
+        font-size: 12pt;
+        align-self: center;
+
+
+        .nav-item
+        {
+            text-decoration: none;
+            color: $white;
+            margin-right: 10%;
+            cursor: pointer;
+
+        }
+
+        @include activeColor($main-color);
+      
+    }
+}
+
+
+// Fixed navbar work when page scrolled down
+.navbar.fixed
+{
+    position:fixed;
+    color:$black;
+    background-color: $white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+    .logo
+    {
+        color:$grey;
+    }
+
+    .nav-items
+    {   
+        .nav-item
+        {
+            color:$black;
+        }
+
+        @include activeColor($main-color);
+    }
+}
+

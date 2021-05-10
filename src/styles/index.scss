@@ -1,6 +1,41 @@
-$color:orange;
+@import 'variables';
+
+* 
+{
+    margin:0;
+    font-family: $font-stack;
+}
 
 
-* {
-    background-color: $color;
+//Header
+@import 'header';
+
+
+
+// Slider
+.slider
+{
+    height:100vh;
+    background-color: #dfdfdf;
+
+    img
+    {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+//Footer
+
+.footer
+{
+    height: 100vh;
 }
