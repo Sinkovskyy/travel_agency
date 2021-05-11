@@ -84,10 +84,10 @@ function Navbar()
     <div className={position}>
         <div className='logo'>FAST TRAVEL</div>
         <div className="nav-items">
-            {items.map((item) =>
+            {items.map((item,key) =>
             {
                 const class_name = item.active ? 'nav-item active':'nav-item';
-                return <a className={class_name} onClick={handleItemClick}>{item.name}</a>
+                return <a className={class_name} key={key} onClick={handleItemClick}>{item.name}</a>
             })}
         </div>
     </div>
