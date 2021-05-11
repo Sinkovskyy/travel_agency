@@ -26,9 +26,10 @@
         color:$white;
         text-align: center;
         align-self: center;
-        font-size: 15pt;
+        font-size: 22pt;
         font-weight: bold;
         transition: color .5s ease-out;
+        font-family: $primary-font;
     }
 
     .nav-items
@@ -36,8 +37,9 @@
         display: flex;
         justify-content: flex-start;
         width: 80%;
-        font-size: 12pt;
+        font-size: 13pt;
         align-self: center;
+        font-weight: bold;
 
 
         .nav-item
