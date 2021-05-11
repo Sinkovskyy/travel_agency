@@ -18,7 +18,7 @@ function* image_generator()
 class Slidebar extends React.Component
 {
 
-    slider_time = 5000;
+    slider_time = 7000;
     constructor(props)
     {
         super(props);
@@ -54,8 +54,12 @@ class Slidebar extends React.Component
 
         return(
             <div className='slider' 
-            style={{backgroundImage: `url(${this.state.image})`}}
-            >
+            style={{backgroundImage: `url(${this.state.image})`}}>
+            <div className='content'>
+                <h1>BALI ISLAND</h1>
+                <p>You’ll always have fascinating places to be and friendly people to see.</p>
+                <button>Starting from just $399</button>
+            </div>
             </div>
         );
     }
