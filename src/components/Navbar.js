@@ -7,8 +7,8 @@ function Navbar()
 {
     const [position,setPosition] = useState('navbar');
     const [items,setItems] = useState([
-        {name:'ABOUT',position:'slider',active:true},
-        {name:'THINGS TO DO',position:'footer',active:false},
+        {name:'HOME',position:'sliderbar',active:true},
+        {name:'ABOUT',position:'about',active:false},
     ]);
 
 
@@ -31,7 +31,7 @@ function Navbar()
     // Scroll listener
     function handleScroll()
     {
-        const category = getCurrentSectionName() || 'ABOUT';
+        const category = getCurrentSectionName() || items[0].name;
         changeItemActiveState(category);
         if(window.pageYOffset >= 30)
         {

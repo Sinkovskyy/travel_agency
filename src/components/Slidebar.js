@@ -1,5 +1,5 @@
 import React from 'react';
-import data from '../images.json'
+import data from '../data/images.json'
 
 
 // generate images 
@@ -53,7 +53,7 @@ class Slidebar extends React.Component
         const generator = image_generator();
 
         return(
-            <div className='slider' 
+            <div className='sliderbar' 
             style={{backgroundImage: `url(${this.state.image})`}}>
             <div className='content'>
                 <h1>BALI ISLAND</h1>

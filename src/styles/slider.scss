@@ -1,9 +1,7 @@
 
 
-
-
 // Slider
-.slider
+.sliderbar
 {
     height:100vh;
     background-position: center ;
@@ -17,7 +15,7 @@
         display: flex;
         width: 100%;
         height: 100%;  
-        background-color: rgba($color: $black, $alpha: 0.25);
+        background-color: rgba($color: $black, $alpha: 0.2);
         color: $white;
         justify-content: center;
         flex-direction: column;

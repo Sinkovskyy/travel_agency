@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Slidebar from './components/Slidebar';
+import About from './components/About';
 import Footer from './components/Footer';
 
 
@@ -9,13 +10,12 @@ function App() {
       <header>
         <Navbar/>
       </header>
-      <nav>
+      <main>
         <Slidebar/>
-      </nav>
-
+        <About/>
+      </main>
 
       <footer>
-       <Footer/>
        <Footer/>
       </footer>
     </div>
