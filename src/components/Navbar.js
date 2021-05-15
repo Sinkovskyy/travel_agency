@@ -12,10 +12,12 @@ import {HiMenu as IconMenu} from 'react-icons/hi'
 
 function Navbar()
 {
+
+    
     const [position,setPosition] = useState('navbar');
     const [items,setItems] = useState([
         {name:'HOME',position:'sliderbar',active:true},
-        {name:'ABOUT',position:'about',active:false},
+        {name:'ABOUT',position:'sliderbar',active:false},
     ]);
     const [sidebarActive,setSidebarActive] = useState(false);
 
@@ -36,19 +38,22 @@ function Navbar()
     }
 
 
+    function changePosition(clicked = false)
+    {
+        let isSidebarActive = clicked ? sidebarActive : !sidebarActive;
+        let position = isSidebarActive ? 'navbar':'navbar fixed';
+        if(isSidebarActive)  
+            position =  (window.pageYOffset >= 30)?'navbar fixed':'navbar';
+        
+        setPosition(position);
+    }
+
     // Scroll listener
     function handleScroll()
     {
         const category = getCurrentSectionName() || items[0].name;
         changeItemActiveState(category);
-        if(window.pageYOffset >= 30)
-        {
-            setPosition('navbar fixed');
-        }
-        else
-        {
-            setPosition('navbar');
-        }
+        changePosition();
     }
     
     // Add and remove scroll listeners 
@@ -88,6 +93,12 @@ function Navbar()
     }
   
 
+    function clickSidebarHandler()
+    {
+        setSidebarActive(!sidebarActive);
+        changePosition(true);
+    }
+
     return(
         <>
     <div className={position}>
@@ -100,7 +111,7 @@ function Navbar()
             })}
         </div>
         <div className="icon-menu-wrapper">
-            <IconMenu className="icon-menu" size={37} onClick={() => {setSidebarActive(!sidebarActive)}}/>
+            <IconMenu className="icon-menu" size={37} onClick={clickSidebarHandler}/>
         </div>
     </div>
     <Sidebar isActive={sidebarActive}>

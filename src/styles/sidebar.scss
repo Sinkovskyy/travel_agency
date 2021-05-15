@@ -1,83 +1,91 @@
 
 $border-color:#e1e1e1;
-$sidebar-width:300px;
-
-
+$sidebar-width:350px;
 
 .sidebar
 {
-    position: fixed;
-    background: $white;
-    height: calc(100vh - #{$header_size});
-    width: $sidebar-width;
-    margin-top: $header_size;
-    display: grid;
-    grid-template-rows: 10% 90%;
-    @include glassEffect(1,12px);
-
-
-
-
-
-    .sidebar-social-media-tags
-    {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        border-bottom: 1px solid $border-color;
-        .icon
-        {
-            cursor: pointer;
-            transition: fill .3s ease;
-            margin: 7px;
-            fill:$black;
-        }
-
-        .icon:hover
-        {
-            fill: $main-color;
-        }
-    }
-
-
-    .nav-items
-    {
-        color: $black;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-
-        .nav-item
-        {
-            padding:20px;
-            transition: all .4s linear ;
-        }
-
-
-        .nav-item.active
-        ,.nav-item:hover
-        {
-            background: $main-color;
-            color: white;
-        }
-
-    }
-
-
+    display: none;  
 }
 
-.sidebar.closed
-{
-    left:-$sidebar-width;
-}
-
-
-@media screen and(min-width:900px) 
+@media screen and (max-width:900px) 
 {
     .sidebar
     {
-        display: none;  
+        position: fixed;
+        background: $white;
+        height: calc(100vh - #{$header_size});
+        width: $sidebar-width;
+        margin-top: $header_size;
+        display: grid;
+        grid-template-rows: 10% 90%;
+        @include glassEffect(1,12px);
+
+        .sidebar-social-media-tags
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid $border-color;
+
+            .icon
+            {
+                cursor: pointer;
+                transition: fill .3s ease;
+                margin: 7px;
+                fill:$black;
+            }
+
+            .icon:hover
+            {
+                fill: $main-color;
+            }
+        }
+
+
+        .nav-items
+        {
+            color: $black;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+
+            .nav-item
+            {
+                padding:20px;
+                transition: all .4s linear ;
+            }
+
+
+            .nav-item.active
+            ,.nav-item:hover
+            {
+                background: $main-color;
+                color: white;
+            }
+            
+
+        }
     }
-      
+
+    .sidebar.closed
+    {
+    left:-500px;
+    }
+
+
+   
+
+}
+
+
+
+@media screen and (max-width:500px) 
+{
+
+    .sidebar
+    {
+        width: 100vw;
+    }
+
 }
