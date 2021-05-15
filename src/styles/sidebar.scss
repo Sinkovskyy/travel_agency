@@ -5,6 +5,7 @@ $sidebar-width:350px;
 .sidebar
 {
     display: none;  
+    
 }
 
 @media screen and (max-width:900px) 
@@ -19,6 +20,9 @@ $sidebar-width:350px;
         display: grid;
         grid-template-rows: 10% 90%;
         @include glassEffect(1,12px);
+        left:0;
+        transition: left .8s ease;
+
 
         .sidebar-social-media-tags
         {
@@ -70,7 +74,7 @@ $sidebar-width:350px;
 
     .sidebar.closed
     {
-    left:-500px;
+        left:-500px;
     }
 
 
@@ -89,3 +93,20 @@ $sidebar-width:350px;
     }
 
 }
+
+
+@keyframes fadeIn 
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+
+
