@@ -1,5 +1,9 @@
 
 
+
+
+
+
 // Change item color when item is active or hovered
 @mixin activeColor($color)
 {
@@ -54,6 +58,7 @@
         @include activeColor($main-color);
       
     }
+
 }
 
 
@@ -84,5 +89,48 @@
 
         @include activeColor($main-color);
     }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 900px)
+{
+
+    .navbar
+    {
+        .logo
+        {
+            font-size: 20pt;
+        }
+
+        .nav-items
+        {
+            display:none;
+        }
+
+    
+    }
+    
+}
+
+
+
+@media screen and (max-width: 500px)
+{
+
+    .navbar
+    {
+        .logo
+        {
+            font-size: 16pt;
+        }
+
+        
+    }
+    
 }
 

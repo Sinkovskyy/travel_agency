@@ -25,6 +25,7 @@
 
         h1
         {
+            text-align: center;
             font-size: 75pt;
             font-family: $primary-font;
         }
@@ -34,6 +35,7 @@
         {
             margin-top: 20px;
             font-size: 24pt;
+            text-align: center;
         }
 
         button
@@ -58,4 +60,51 @@
 
     }
 
+}
+
+
+
+
+@media screen and (max-width: 1000px)
+ {
+    
+    .sliderbar
+    {
+        .content
+        {
+
+            h1
+            {
+                font-size: 70pt;
+            }
+
+            p
+            {
+                font-size: 20pt;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 500px)
+ {
+    
+    .sliderbar
+    {
+        .content
+        {
+
+            h1
+            {
+                font-size: 50pt;
+            }
+
+            p
+            {
+                font-size: 15pt;
+            }
+        }
+    }
 }

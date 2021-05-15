@@ -1,6 +1,5 @@
 import {useState,useEffect} from 'react'
-
-
+import { bubble as Menu } from 'react-burger-menu'
 
 
 function Navbar()
@@ -80,6 +79,12 @@ function Navbar()
     }
 
 
+    function showSettings(event)
+    {
+        event.preventDefault();
+    }
+  
+
     return(
     <div className={position}>
         <div className='logo'>FAST TRAVEL</div>
@@ -90,6 +95,7 @@ function Navbar()
                 return <a className={class_name} key={key} onClick={handleItemClick}>{item.name}</a>
             })}
         </div>
+        
     </div>
     );
 }

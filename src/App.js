@@ -12,11 +12,11 @@ function App() {
       </header>
       <main>
         <Slidebar/>
-        <About/>
+        {/* <About/> */}
       </main>
 
       <footer>
-       <Footer/>
+       {/* <Footer/> */}
       </footer>
     </div>
   );
