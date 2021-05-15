@@ -1,5 +1,13 @@
 import {useState,useEffect} from 'react'
-import { bubble as Menu } from 'react-burger-menu'
+import Sidebar from './Sidebar';
+
+import {HiMenu as IconMenu} from 'react-icons/hi'
+
+
+
+
+
+
 
 
 function Navbar()
@@ -9,6 +17,7 @@ function Navbar()
         {name:'HOME',position:'sliderbar',active:true},
         {name:'ABOUT',position:'about',active:false},
     ]);
+    const [sidebarActive,setSidebarActive] = useState(false);
 
 
 
@@ -77,15 +86,10 @@ function Navbar()
         // Scroll to the clicked category
         document.getElementsByClassName(active_item.position)[0].scrollIntoView({ behavior: 'smooth' });
     }
-
-
-    function showSettings(event)
-    {
-        event.preventDefault();
-    }
   
 
     return(
+        <>
     <div className={position}>
         <div className='logo'>FAST TRAVEL</div>
         <div className="nav-items">
@@ -95,8 +99,18 @@ function Navbar()
                 return <a className={class_name} key={key} onClick={handleItemClick}>{item.name}</a>
             })}
         </div>
-        
+        <div className="icon-menu-wrapper">
+            <IconMenu className="icon-menu" size={37} onClick={() => {setSidebarActive(!sidebarActive)}}/>
+        </div>
     </div>
+    <Sidebar isActive={sidebarActive}>
+        {items.map((item,key) =>
+            {
+                const class_name = item.active ? 'nav-item active':'nav-item';
+                return <a className={class_name} key={key} onClick={handleItemClick}>{item.name}</a>
+            })}
+    </Sidebar>
+    </>
     );
 }
 

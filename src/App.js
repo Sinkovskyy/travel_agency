@@ -7,16 +7,16 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
-      <header>
+      <header className=".noselect">
         <Navbar/>
       </header>
       <main>
         <Slidebar/>
-        {/* <About/> */}
+        <About/>
       </main>
 
       <footer>
-       {/* <Footer/> */}
+       <Footer/>
       </footer>
     </div>
   );
