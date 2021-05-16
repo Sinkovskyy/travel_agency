@@ -1,0 +1,41 @@
+{
+
+    "0":
+    {
+        "title":"Personalized Matching",
+        "icon": "bi-sliders",
+        "description":"Our unique matching system lets you find just the tour you want for your next holiday."
+    },
+    "1":
+    {
+        "title":"Highly Qualified Service",
+        "icon": "bi-stars",
+        "description":"Our tour managers are qualified, skilled, and friendly to bring you the best service."
+    },
+    "2":
+    {
+        "title":"Handpicked Hotels",
+        "icon": "bi-brightness-high",
+        "description":"Our team offers only the best selection of affordable and luxury hotels to our clients."
+    },
+    "3":
+    {
+        "title":"Best Price Guarantee",
+        "icon": "bi-cash-coin",
+        "description":"If you find tours that are cheaper than ours, we will compensate the difference."
+    },
+    "4":
+    {
+        "title":"24/7 Support",
+        "icon": "bi-clock",
+        "description":"You can always get professional support from our staff 24/7 and ask any question you have."
+    },
+    "5":
+    {
+        "title":"Wide Variety of Tours",
+        "icon": "bi-calendar-check",
+        "description":"We offer a wide variety of personally picked tours with destinations all over the glob."
+    }
+
+
+}

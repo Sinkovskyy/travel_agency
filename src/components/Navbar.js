@@ -17,7 +17,7 @@ function Navbar()
     const [position,setPosition] = useState('navbar');
     const [items,setItems] = useState([
         {name:'HOME',position:'sliderbar',active:true},
-        {name:'ABOUT',position:'sliderbar',active:false},
+        {name:'ABOUT',position:'about',active:false},
     ]);
     const [sidebarActive,setSidebarActive] = useState(false);
 
@@ -72,7 +72,7 @@ function Navbar()
         // Change active item
         setItems(items.map((item) =>
         {
-            if(current_active == item.name)
+            if(current_active === item.name)
             {
                 active_item = item;
                 return {...item,active:true};
