@@ -9,7 +9,8 @@
     {
     display: grid;
     grid-template-columns: 50% 50%;
-    margin-top: 8vh;
+    margin-top: 10vh;
+    height: 60vh;
 
         // Image container
         .image
@@ -20,7 +21,8 @@
 
             img
             {
-                width: 70%;
+                height:60%;
+                align-self: center;
             }
         }
 
@@ -32,25 +34,21 @@
             flex-direction: column;
             justify-content: center;
             padding-left: 50px;
-            width: 60%;
-            max-width: 460t
-            px;
+            width: 550px;
+            align-self: center;
 
 
             h2
             {
-                font-size: 27pt;
-                text-align: center;  
+                font-size: 29pt;
+                margin-bottom: 25px;  
             }
 
             // Slider
             .tag-slider
             {
-                margin-top: 20px;
                 display: flex;
                 flex-direction: row;
-                align-self: center;
-                justify-content: center;
 
                 .slide
                 {
@@ -63,7 +61,7 @@
 
                     a
                     {
-                        margin: 10px;
+                        margin: 14px;
                         font-weight: 300;
                         font-size: 13pt;
                     }
@@ -86,9 +84,10 @@
             p
             {
                 align-self: center;
-                padding-top: 20px;
+                padding-top: 30px;
+                padding-right: 15%;
                 font-weight: 300;
-                font-size: 15px;
+                font-size: 16px;
                 line-height: 1.5;
                 transition: all 1s ease-in;
             }
@@ -131,4 +130,244 @@
 
 
     }   
+}
+
+
+
+@media screen and (max-width:1200px) 
+{
+
+    .about
+    {
+    
+        // Dicover container
+        .discover
+        {
+            // Image container
+            .image
+            {
+                padding-right: 0;
+    
+                img
+                {
+                    height:50%;
+                }
+            }
+    
+    
+            // Text container
+            .info
+            {
+                
+                width: 550px;
+    
+    
+                h2
+                {
+                    font-size: 26pt;
+                    margin-bottom: 22px;  
+                }
+    
+                // Slider
+                .tag-slider
+                {
+                    .slide
+                    {
+    
+                        a
+                        {
+                            margin: 14px;
+                            font-weight: 300;
+                            font-size: 12pt;
+                        }
+                    }
+                }
+    
+                // End slider
+    
+                p
+                {
+                    font-size: 14px;
+                }
+    
+                button
+                {
+                    font-size: 14pt;
+                    padding: 15px 20px ;
+                    width: 140px;
+                    
+                }
+    
+                button:hover
+                {
+                    background-color: $white;
+                    border: 1px solid $black;
+                    color: $black;
+                }
+                
+            }
+    
+             // End Text container
+            
+    
+    
+        }   
+    }
+    
+    
+}
+
+
+@media screen and (max-width:1000px) 
+{
+
+   .about
+   {
+        .discover
+        {
+            grid-template-columns: 100%;
+            grid-template-rows: 50% 50%;
+            height: 80vh;
+            justify-items: center;
+           
+
+                // Image container
+                .image
+                {
+                    justify-content: center;
+                    img
+                    {
+                        height:100%;
+                        max-width: 100%;
+                    }
+                }
+
+                // Text container
+            .info
+            {
+                padding-left: 0;
+                width: 80%;
+            
+
+
+                h2
+                {
+                    font-size: 25pt;
+                    margin-bottom: 25px;
+                }
+
+                // Slider
+                .tag-slider
+                {
+                    .slide
+                    {
+                        
+                        a
+                        {
+                            margin: 50px;
+                            font-size: 13pt;
+                        }
+                    }
+
+                
+                }
+
+                // End slider
+
+                p
+                {
+                    padding-right: 5%;
+                    font-size: 16px;
+                    line-height: 1.7;
+                
+                }
+
+            
+
+
+           
+            
+        }
+
+         // End Text container
+        
+            
+
+
+
+        }
+   }
+   
+
+    
+    
+}
+
+
+@media screen and (max-width:830px) 
+{
+    .about
+    {
+        .discover
+        {
+            
+            .info
+            {
+
+                
+
+                .tag-slider
+                {
+               
+                    .slide
+                    {
+                        a
+                        {
+                            margin: 25px;
+                            font-size: 12pt;
+                        } 
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width:620px) 
+{
+    .about
+    {
+        .discover
+        {
+            // Image container
+            .image
+            {
+                
+
+                img
+                {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .info
+            {
+                .tag-slider
+                {
+               
+                    .slide
+                    {
+                        a
+                        {
+                            margin: 10px;
+                            font-size: 12pt;
+                        } 
+                    }
+                }
+            }
+        }
+    }
+
 }

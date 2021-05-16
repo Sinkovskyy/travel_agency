@@ -21,7 +21,7 @@ function Discover()
     return(
         <div className="discover">
             <div className="container image">
-                <img src="./images/bali.jpg"/>
+                <img src="./images/about1.jpg"/>
             </div>
             <div className="container info">
                 <h2>Discover New Horizons</h2>

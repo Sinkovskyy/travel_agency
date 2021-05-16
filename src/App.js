@@ -12,7 +12,7 @@ function App() {
       </header>
       <main>
         <Slidebar/>
-        {/* <About/> */}
+        <About/>
       </main>
 
       <footer>
