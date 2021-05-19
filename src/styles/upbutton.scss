@@ -1,0 +1,36 @@
+
+
+
+
+
+.upbutton
+{
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    background-color:$secondary-color;
+    right: 50px;
+    bottom: 120px;
+    border:0;
+    transition: background-color .5s ease-in-out;
+    cursor:pointer;
+
+    .icon
+    {
+        fill:$white;
+    }
+
+}
+
+.unactive
+{
+    display: none;
+}
+
+
+.upbutton:hover
+{
+    background-color: $main-color;
+
+}
+

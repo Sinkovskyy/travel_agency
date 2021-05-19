@@ -2,7 +2,7 @@ import Navbar from './components/Navbar';
 import Slidebar from './components/Slidebar';
 import About from './components/About';
 import Footer from './components/Footer';
-
+import UpButton from './components/UpButton';
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
       <footer>
        <Footer/>
       </footer>
+      <UpButton/>
     </div>
   );
 }
