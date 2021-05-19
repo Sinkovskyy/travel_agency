@@ -14,10 +14,10 @@ export default (props) =>
 
         <div className={(props.isActive)? "sidebar":"sidebar closed"}>
             <div className="sidebar-social-media-tags">
-                <Facebook className="icon" size={ICON_SIZE} />
-                <Twitter className="icon" size={ICON_SIZE} />
-                <Instagram className="icon" size={ICON_SIZE} />
-                <Linkedin className="icon" size={ICON_SIZE} />
+                <Facebook className="icon facebook" size={ICON_SIZE} />
+                <Twitter className="icon twitter" size={ICON_SIZE} />
+                <Instagram className="icon instagram" size={ICON_SIZE} />
+                <Linkedin className="icon linkedin" size={ICON_SIZE} />
             </div>
             <div className="nav-items">
             {props.children}

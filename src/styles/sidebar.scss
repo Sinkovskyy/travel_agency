@@ -40,9 +40,22 @@ $sidebar-width:350px;
                 fill:$black;
             }
 
-            .icon:hover
+            .facebook:hover
             {
-                fill: $main-color;
+                fill: $facebook-color;
+            }
+
+            .twitter:hover
+            {
+                fill: $twitter-color;
+            }
+            .instagram:hover
+            {
+                fill: $instagram-color;
+            }
+            .linkedin:hover
+            {
+                fill: $linkedin-color;
             }
         }
 
