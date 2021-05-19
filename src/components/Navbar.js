@@ -1,6 +1,6 @@
 import {useState,useEffect} from 'react'
 import Sidebar from './Sidebar';
-
+import NavItemsData from "../data/navigator.json"
 import {HiMenu as IconMenu} from 'react-icons/hi'
 
 
@@ -15,10 +15,8 @@ function Navbar()
 
     
     const [position,setPosition] = useState('navbar');
-    const [items,setItems] = useState([
-        {name:'HOME',position:'sliderbar',active:true},
-        {name:'ABOUT',position:'about',active:false},
-    ]);
+
+    const [items,setItems] = useState(Object.keys(NavItemsData).map((item) => NavItemsData[item]));
     const [sidebarActive,setSidebarActive] = useState(false);
 
 

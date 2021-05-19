@@ -14,9 +14,7 @@ function App() {
         <Slidebar/>
         <About/>
       </main>
-
       <footer>
-       <Footer/>
        <Footer/>
       </footer>
     </div>
