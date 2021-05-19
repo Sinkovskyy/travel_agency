@@ -1,9 +1,129 @@
 
-
-
-
-
 .footer
 {
+    margin-top: 100px;
+    display: grid;
+    grid-template-areas: "logo logo tags other other";
+    padding: 130px 10%;
+    border-top: 2px solid $ligth-grey;
+
+    .logo
+    {
+        color:$grey;
+        font-family: $primary-font;
+        font-size: 20pt;
+        font-weight: bold;
+        grid-area: logo;
+        text-align: center;
+        transition: color .5s ease;
+        cursor: pointer;
+        padding-top: 10px;
+    }
     
+    .logo:hover
+    {
+        color:$secondary-color;
+    }
+
+
+    .nav-items
+    {
+        display: flex;
+        flex-direction: column;
+        grid-area: tags;
+       
+        .container
+        {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            width: 290px;
+            padding-right: 0px 20% 0 10%;
+            align-self: center;
+        
+            .nav-item
+            {
+                color:$grey;
+                letter-spacing: 1px;
+                font-size: 12pt;
+                font-weight: 300;
+                cursor:pointer;
+                transition: color .5s ease;
+                padding: 10px;
+                
+            }
+
+            .nav-item:hover
+            {
+                color: $main-color;
+            }
+        }
+        
+
+    }
+    .other
+    {
+        grid-area: other;
+        padding: 0 10%;
+
+        .social-media-tags
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            .icon
+            {
+                cursor:pointer;
+                margin: 10px;
+                fill:$grey;
+                transition: fill .5s ease;
+            }
+          
+
+            .facebook:hover
+            {
+                fill: $facebook-color;
+            }
+
+            .twitter:hover
+            {
+                fill: $twitter-color;
+            }
+            .instagram:hover
+            {
+                fill: $instagram-color;
+            }
+            .linkedin:hover
+            {
+                fill: $linkedin-color;
+            }
+
+            
+        }
+        .license
+        {
+            margin-top:10px;
+            color:$grey;
+            text-align: center;
+        }
+    }
+    
+}
+
+
+
+
+
+@media screen and (max-width:1000px) 
+{
+    .footer
+    {
+        padding:100px 5%;
+        grid-template-areas: 
+        "logo logo items"
+        "logo logo items"
+        "other other items"
+        "other other items"
+        ;
+    }
 }
