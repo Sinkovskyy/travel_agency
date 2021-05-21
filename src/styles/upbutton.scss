@@ -33,3 +33,13 @@
     background-color: $main-color;
 }
 
+
+
+@media screen and(max-width:700px) 
+{
+    .upbutton
+    {
+        bottom: 60px;
+        right: 30px;
+    }
+}
