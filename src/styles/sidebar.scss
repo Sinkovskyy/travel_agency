@@ -22,6 +22,7 @@ $sidebar-width:350px;
         @include glassEffect(1,12px);
         left:0;
         transition: left .8s ease;
+        z-index: 100;
 
 
         .sidebar-social-media-tags
