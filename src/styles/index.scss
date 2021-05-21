@@ -14,7 +14,6 @@
 *:after,
 *::before 
 {
-
     margin:0;
     font-family: $font-stack;
     -webkit-box-sizing: border-box !important;
@@ -41,6 +40,10 @@
 
 //About
 @import 'about';
+
+
+//Offers
+@import 'offers';
 
 
 //Footer

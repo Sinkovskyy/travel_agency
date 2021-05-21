@@ -1,4 +1,5 @@
 {
     "0":{"name":"HOME","position":"sliderbar","active":true},
-    "1":{"name":"ABOUT","position":"about","active":false}
+    "1":{"name":"ABOUT","position":"about","active":false},
+    "2":{"name":"OFFERS","position":"offers","active":false}
 }
