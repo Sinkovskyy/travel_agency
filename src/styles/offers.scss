@@ -2,6 +2,9 @@
 
 .offers
 {
+
+    $container-width:400px;
+    padding: 100px 0 150px;
     margin-top: 100px;
     text-align: center;
     display: flex;
@@ -9,7 +12,7 @@
     justify-content: center;
     align-items: center;
     background-color: $ligth-grey;
-    padding: 150px;
+    width: 100%;
     
     h2
     {
@@ -25,12 +28,13 @@
     }
 
 
-    $container-width:400px;
+   
     .offer-frames
     {
         display: grid;
         grid-template-columns: repeat(3,$container-width);
         flex-direction: row;
+        gap:50px;
 
         .offer-frame
         {   
@@ -39,13 +43,13 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            margin: 20px;
 
             .image-container
             {
                 height: $container-width;
                 position: relative;
                 overflow: hidden;
+                
                 img
                 {
                     height: 100%;
@@ -75,12 +79,13 @@
                     transform: translate(-50%, -50%);
                     background-color: $secondary-color;
                     border: 0;
+                    border-radius: 2px;
                     color:$white;
-                    padding: 13px;
+                    padding: 15px;
                     cursor: pointer;
                     transition: all .5s ease;
                     opacity: 0;
-                    font-size: 12pt;
+                    font-size: 13pt;
                     font-weight: bold;
                     letter-spacing: 1px;
                 }
@@ -120,7 +125,7 @@
 
         }
 
-        .offer-frame:hover > .image-container > .layer,
+        .offer-frame:hover > .image-container > .layer
         {  
             opacity: 1;
         }
@@ -129,4 +134,112 @@
 
 }
 
+
+
+@media screen and (max-width:1350px)
+{
+    
+    .offers
+    {
+        $container-width:340px;
+
+        .offer-frames
+        {
+            grid-template-columns: repeat(3,$container-width);
+            
+            .offer-frame
+            {
+                
+                .image-container
+                {
+                    height: $container-width;
+                }
+            
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:1350px)
+{
+    
+    .offers
+    {
+        $container-width:300px;
+
+        .offer-frames
+        {
+            grid-template-columns: repeat(3,$container-width);
+            
+            .offer-frame
+            {
+                
+                .image-container
+                {
+                    height: $container-width;
+                }
+            
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width:1050px)
+{
+    
+    .offers
+    {
+        $container-width:450px;
+
+        .offer-frames
+        {
+            grid-template-columns: repeat(1,$container-width);
+            
+            .offer-frame
+            {
+                
+                .image-container
+                {
+                    height: $container-width;
+                }
+            
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width:750px)
+{
+    
+    .offers
+    {
+        $container-width:400px;
+        overflow-y: hidden;
+
+        p
+        {
+            width:90%;
+        }
+
+        .offer-frames
+        {
+            grid-template-columns: repeat(1,$container-width);
+            
+            .offer-frame
+            {
+                
+                .image-container
+                {
+                    height: $container-width;
+                }
+            
+            }
+        }
+    }
+}
 

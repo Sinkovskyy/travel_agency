@@ -11,9 +11,7 @@ function Offers()
             <p>On Bali there are so many variety of dwelling for everyone tastes.
              So if you want something exsotic be sure 
              that on Bali you will find what you are looking!</p>
-            <div className="offer-frames"
-            
-            >
+            <div className="offer-frames">
                 {Object.keys(ApartmentsData).map(i => 
                 {
                     return(

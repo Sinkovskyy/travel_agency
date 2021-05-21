@@ -1,0 +1,149 @@
+[33mcommit 752d9d2692726743e239e1ac7c1d098b912002b9[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Fri May 21 15:17:23 2021 +0300
+
+    Offer page was realized
+
+[33mcommit e05dd41f0f2d4219ba80c338ec375c0bc16e3f37[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Wed May 19 18:45:54 2021 +0300
+
+    Click event on footer's items was added
+
+[33mcommit 18efc8ba496eaadbd3b82ed6e334c1b4958f6cca[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Wed May 19 18:33:06 2021 +0300
+
+    Up Button for scroll to up was realized
+
+[33mcommit a29c3ba38714b3516df866ce16acae1ec2b26b33[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Wed May 19 17:23:23 2021 +0300
+
+    Sidebar social media tags hover colors were changed
+
+[33mcommit 8dded2562ab770a706546faf4f0ddc6fc20ef95a[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Wed May 19 15:16:04 2021 +0300
+
+    Footer are adaptive now
+
+[33mcommit ba428628d66863814f9825103eef35393dcfd93d[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Wed May 19 14:55:18 2021 +0300
+
+    Desktop footer was done
+
+[33mcommit e151232a0975f5c0f50f9183c87ea3aab448294e[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Wed May 19 13:22:30 2021 +0300
+
+    Bug with margin styles was fixed
+
+[33mcommit dc4ab527160df71e2f9dbb94a50b55627942586e[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Wed May 19 13:07:18 2021 +0300
+
+    Navbar Items were transfered in json file
+
+[33mcommit 83c98406f9f4537bb4ced2fcba26ed0ba2ea5e34[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Sun May 16 16:09:30 2021 +0300
+
+    Our Servises section is adaptive now
+
+[33mcommit c2c6d2f25633d2e6cdc69fd5eb06f52a93ea7c37[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Sun May 16 15:22:05 2021 +0300
+
+    Servises panel was done
+
+[33mcommit c037c458ee919561dc608f62940286a021d3c4cd[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Sun May 16 11:35:00 2021 +0300
+
+    Adaptive version for discover panel done
+
+[33mcommit f710c690da5b5277a30b6a676aed6898b50103a1[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Sat May 15 19:17:14 2021 +0300
+
+    Sidebar animation was done
+
+[33mcommit 6c7f7436bddb6084ee9fcefab560acc7c518d9e8[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Sat May 15 18:04:09 2021 +0300
+
+    Remove npm dependencies
+
+[33mcommit 18eebf0ff66def8ba5e8c218a4c1379ed246ff52[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Sat May 15 16:04:47 2021 +0300
+
+    Slidebar are adaptive now and some bugs were fixed
+
+[33mcommit 72a797079af7ff0b18186f264abc973416ddbe52[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Sat May 15 15:13:35 2021 +0300
+
+    Sidebar was realized
+
+[33mcommit bca92b334c705d5e6ca104e88b3fe66440068c47[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Sat May 15 12:41:05 2021 +0300
+
+    Slidebar adaptive version done
+
+[33mcommit 419d1d2ab07cdaaa2448bcde0728e7dafb0b160c[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Wed May 12 16:34:46 2021 +0300
+
+    Discover section was created
+
+[33mcommit 2c0e5dee8371467beb37d20c0da81fea70c80a35[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Tue May 11 15:20:43 2021 +0300
+
+    Color pallete and font styles were setuped
+
+[33mcommit aeabf4a7d09537794d582147c927be2b37dcb520[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Tue May 11 14:52:35 2021 +0300
+
+    Slider content ready
+
+[33mcommit cd4a5ea086f8e834ee881ccfa9456b865a44b787[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Tue May 11 14:01:50 2021 +0300
+
+    Slider was realized
+
+[33mcommit 5076ed53968037ef6f1a63dc575d3586a3fe298b[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Tue May 11 11:34:34 2021 +0300
+
+    Glass effect was changed
+
+[33mcommit c30c9072a745f665199e00c6517b257befa32506[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Tue May 11 11:24:05 2021 +0300
+
+    Glass effect for header was realized
+
+[33mcommit b25e0b21864689665e8e37df392e3c6375128456[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Tue May 11 11:10:52 2021 +0300
+
+    Animation was realized for header
+
+[33mcommit 5c521869afbfa56b1c26d92438379b33487f3515[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Mon May 10 17:11:18 2021 +0300
+
+    Header was realized
+
+[33mcommit e737aec76fafbce4373ba7f414cf82d7250fc11f[m
+Author: mywat88 <viktorsink202@gmail.com>
+Date:   Sun May 9 19:09:30 2021 +0300
+
+    Project init
