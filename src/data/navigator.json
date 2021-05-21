@@ -1,5 +1,6 @@
 {
     "0":{"name":"HOME","position":"sliderbar","active":true},
     "1":{"name":"ABOUT","position":"about","active":false},
-    "2":{"name":"OFFERS","position":"offers","active":false}
+    "2":{"name":"GET INSPIRED","position":"inspired","active":false},
+    "3":{"name":"OFFERS","position":"offers","active":false}
 }
