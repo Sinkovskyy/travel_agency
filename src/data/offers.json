@@ -1,15 +1,34 @@
 {
-    "0":{"title":"Blue Horizon Apartments",
-        "description":"Blue Horizon Apartments is located just 80 meters from the sandy beach in the small fishing village of Bali.",
-        "price":24,
-        "image":"./images/apartment2.jpg"},
-    "1":{"title":"Blue Horizon Apartments",
-        "description":"Blue Horizon Apartments is located just 80 meters from the sandy beach in the small fishing village of Bali.",
-        "price":24,
-        "image":"./images/apartment2.jpg"},
-    "2":{"title":"Blue Horizon Apartments",
-        "description":"Blue Horizon Apartments is located just 80 meters from the sandy beach in the small fishing village of Bali.",
-        "price":24,
-        "image":"./images/apartment2.jpg"}
-
+    "0": {
+        "title": "Blue Horizon Apartments",
+        "price": 24,
+        "images": [
+            "./images/bha1.jpg",
+            "./images/bha2.jpg",
+            "./images/bha3.jpg",
+            "./images/bha4.jpg"
+        ]
+    },
+    "1": {
+        "title": "Bulgari Resort Bali",
+        "price": 24,
+        "images": [
+            "./images/brb1.jpg",
+            "./images/brb2.jpg",
+            "./images/brb3.jpeg",
+            "./images/brb4.jpg",
+            "./images/brb5.jpg",
+            "./images/brb6.jpg"
+        ]
+    },
+    "2": {
+        "title": "Six Senses Uluwatu",
+        "price": 24,
+        "images": [
+            "./images/ulu4.jpg",
+            "./images/ulu2.jpg",
+            "./images/ulu3.jpg",
+            "./images/ulu1.jpg"
+        ]
+    }
 }
