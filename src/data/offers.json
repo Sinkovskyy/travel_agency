@@ -1,7 +1,7 @@
 {
     "0": {
         "title": "Blue Horizon Apartments",
-        "price": 24,
+        "price": 54,
         "images": [
             "./images/bha1.jpg",
             "./images/bha2.jpg",
@@ -11,7 +11,7 @@
     },
     "1": {
         "title": "Bulgari Resort Bali",
-        "price": 24,
+        "price": 950,
         "images": [
             "./images/brb1.jpg",
             "./images/brb2.jpg",
@@ -23,7 +23,7 @@
     },
     "2": {
         "title": "Six Senses Uluwatu",
-        "price": 24,
+        "price": 300,
         "images": [
             "./images/ulu4.jpg",
             "./images/ulu2.jpg",

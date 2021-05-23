@@ -1,6 +1,7 @@
 import ApartmentsData from "../data/offers.json";
 import {AiOutlineLeft as Left,AiOutlineRight as Right} from "react-icons/ai";
 import {useState} from "react";
+import Map from './Map';
 
 
 
@@ -12,7 +13,7 @@ function InfoBar(props)
     for(let i = 0; i < props.length;i++)
     {
         const className = (props.activePosition == i) ? "active bar":"bar"; 
-        bars[i] = <div class={className}></div>
+        bars[i] = <div key={i} className={className}></div>
     }
 
     return(
@@ -73,6 +74,7 @@ function Offers()
     
 
     return(
+        <>
         <div className="offers" >
             <h2>Hotels & Apartments</h2>
             <p>On Bali there are so many variety of dwelling for everyone tastes.
@@ -82,14 +84,18 @@ function Offers()
                 {Object.keys(ApartmentsData).map(i => 
                 {
                     return(
-                        <OfferFrame  title={ApartmentsData[i].title}
+                        <OfferFrame  key={i} title={ApartmentsData[i].title}
                              price={ApartmentsData[i].price} 
                              images={ApartmentsData[i].images} />
                         
                         );
                 })}
             </div>
+
+           
         </div>
+        <Map/>
+        </>
     );
 }
 
