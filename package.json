@@ -1,6 +1,6 @@
 {
-  "homepage": "https://mywat17.github.io/travel_agency/",
-  "name": "travel-agency",
+  "homepage": "https://mywat17.github.io/travel_agency",
+  "name": "travel_agency",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
