@@ -13,7 +13,7 @@ function Map()
         center={[-8.409518, 115.188919]} 
         zoom={9} 
         scrollWheelZoom={false}
-        dragging={false}
+        dragging={true}
         >
             <TileLayer
                 // attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
