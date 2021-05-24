@@ -20,8 +20,9 @@
         transform:translate(-50%,-50%);
         color: $white;
         font-family: $primary-font;
-        font-size: 90pt;
+        font-size: 120pt;
         z-index: 2;
+        text-align: center;
     }
 
     video
@@ -37,4 +38,18 @@
         transform:translate(-50%,-50%);
         z-index: 1;
     }
+}
+
+
+@media screen and (max-width:650px) 
+{
+
+    .inspired
+    {
+        h2
+        {
+            font-size: 60pt;
+        }
+    }
+    
 }

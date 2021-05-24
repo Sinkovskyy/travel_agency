@@ -16,12 +16,12 @@ function Map()
         dragging={true}
         >
             <TileLayer
-                // attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             <Marker position={[-8.409518, 115.188919]} icon={new Icon({iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41]})}>
                 <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
+                   The best place on the Earth!
                 </Popup>
             </Marker>
 
