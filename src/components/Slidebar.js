@@ -52,6 +52,8 @@ class Slidebar extends React.Component
 
         const generator = image_generator();
 
+        
+
         return(
             <div className='sliderbar' 
             style={{backgroundImage: `url(${this.state.image})`}}>

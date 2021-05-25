@@ -1,16 +1,93 @@
 import discoverData from "../data/discover_panel.json";
 import servisesData from "../data/our_servises.json";
 import {useState} from 'react';
-// import { GoSettings } from 'react-icons';
+import {useSpring,animated,useSprings} from 'react-spring';
+import useView from "./useView";
+
+
+function DiscoverInfo(props)
+{
+
+    const fadeIn = useSpring({
+        from:{
+            opacity:0,
+        },
+        to:
+        {
+            transition:"opacity .5s ease-out",
+            opacity: props.isScrolled?1:0
+        },
+
+    });
 
 
 
 
+    return(
+                <>
+                <div className="tag-slider">
+                    {Object.keys(props.discoverData).map((key) => 
+                    {
+                        const class_name = key === props.tag ? "slide active":"slide"; 
+                        return(
+                            <div key={key} className={class_name} onClick={props.onClick}>
+                                <a>{key.split("_").join(" ")}</a>
+                            </div>
+                        );
+                    })}
+                </div>
+                <animated.div  style={fadeIn}>
+                    <p>{props.discoverData[props.tag]}</p>
+                    <button>Read More</button>
+                </animated.div>
+                </>
+    );
+}
 
 
 function Discover()
 {
     const [tag,setTag] = useState("ABOUT_US");
+    const mainClassName = "discover";
+    const isScrolled = useView(mainClassName);
+
+    const discoverInfoAnims = useSpring(
+        {
+            config:
+            {
+                duration:800,
+                delay:400,
+                
+            },
+            from:
+            {
+             transition: "opacity 1s linear",
+             x:400,
+             opacity:0
+            },
+            to:
+            {
+                opacity: isScrolled ? 1:0,
+                x:isScrolled ? 0: 400,
+            }
+
+
+        }
+    );
+
+    const imageAnim = useSpring({
+        from:
+        {
+            opacity:0,
+            transform: "rotateY(90deg) rotateX(90deg)",
+            transition: "all 1s ease" 
+        },
+        to:
+        {
+            opacity: isScrolled ? 1:0,
+            transform: isScrolled ? "rotateY(0deg) rotateX(0deg)" : "rotateY(90deg) rotateX(90deg)",
+        }
+    });
 
 
     function clickHandler(event)
@@ -19,31 +96,22 @@ function Discover()
         setTag(new_tag);
     }
 
+
+
     return(
-        <div className="discover">
+        <div className={mainClassName}>
             <div className="container image">
-                <img src="./images/about1.jpg" alt="about"/>
+                <animated.img style={imageAnim} src="./images/about1.jpg" alt="about"/>
             </div>
-            <div className="container info">
-                <h2>Discover New Horizons</h2>
-                <div className="tag-slider">
-                    {Object.keys(discoverData).map((key) => 
-                    {
-                        const class_name = key === tag ? "slide active":"slide"; 
-                        return(
-                            <div key={key} className={class_name} onClick={clickHandler}>
-                                <a>{key.split("_").join(" ")}</a>
-                            </div>
-                        );
-                    })}
-                    
-                </div>
-                <p>{discoverData[tag]}</p>
-                <button>Read More</button>
-            </div>
-        </div>
+            <animated.div style={discoverInfoAnims} className="container info">
+                <h2 >Discover New Horizonts</h2>
+                <DiscoverInfo key={tag} discoverData={discoverData} tag={tag} isScrolled={isScrolled} onClick={clickHandler}/>
+            </animated.div>  
+        </div>     
     );
 }
+
+
 
 
 function Servises()
@@ -70,6 +138,8 @@ function Servises()
         </div>
     );
 }
+
+
 
 function About()
 {

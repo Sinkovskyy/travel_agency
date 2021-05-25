@@ -1,5 +1,4 @@
 {
-  "homepage": "https://Sinkovskyy.github.io/travel_agency",
   "name": "travel_agency",
   "version": "0.1.0",
   "private": true,
@@ -13,6 +12,7 @@
     "react-icons": "^4.2.0",
     "react-leaflet": "^3.2.0",
     "react-scripts": "4.0.3",
+    "react-spring": "^9.1.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
