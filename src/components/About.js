@@ -113,25 +113,49 @@ function Discover()
 
 
 
-
 function Servises()
 {
+    const mainClassName = "servises";
+    const isVisiable = useView(mainClassName);
+
+
+    const shuffleItems = useSprings(Object.keys(servisesData).length,
+    Object.keys(servisesData).map((item) =>{
+        const x = Math.random() * (1000 + 1000) - 1000;
+        const y = Math.random() * (1000 + 1000) - 1000 ;
+        return(
+    {
+       from:
+       {
+           opacity:0,
+           transition:"opacity .01s ease , all 2s ease",
+           x:x,
+           y:y
+       },
+       to:
+       {
+        opacity:isVisiable? 1:0,
+        x: isVisiable? 0:x,
+        y: isVisiable? 0:y,
+       }
+    })}));
+
+
     
     return(
-        <div className='servises'>
+        <div className={mainClassName}>
             <h2>Our Servises</h2>
             <div className="block-container">
-            { Object.keys(servisesData).map((item) =>
+            { shuffleItems.map((prop,item) =>
             {
                 return(
-                    <div className="container" key={item}>
+                    <animated.div style={prop} className="container" key={item}>
                         <div className="s-block" >
-                        
                             <i className={servisesData[item].icon}></i>
                             <h3>{servisesData[item].title}</h3>
                             <p>{servisesData[item].description}</p>
                         </div>
-                     </div>
+                     </animated.div>
                      );
             })}
             </div>
