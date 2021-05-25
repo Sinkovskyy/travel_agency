@@ -9,7 +9,7 @@ import UpButton from './components/UpButton';
 function App() {
   return (
     <div className="App">
-      <header className=".noselect">
+      <header>
         <Navbar/>
       </header>
       <main>

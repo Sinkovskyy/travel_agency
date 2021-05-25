@@ -8,7 +8,7 @@ import {
 
 
 export default (props) =>
-{
+{   
     const ICON_SIZE = 20;
     return(
 
