@@ -6,7 +6,7 @@ import {useSpring,animated} from "react-spring";
 export default () => 
 {
     const mainClassName = "inspired";
-    const isVisiable = useView(mainClassName,-200);
+    const isVisiable = useView(mainClassName,-700);
     const textAnimation = useSpring(
     {
 
