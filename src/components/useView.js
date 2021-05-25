@@ -2,7 +2,7 @@ import {useState,useEffect} from "react";
 
 
 
-export default function useView(className,offset = 500)
+export default function useView(className,offset = 300)
 {
     const [state,setState] = useState(false);
 

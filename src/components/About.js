@@ -124,27 +124,39 @@ function Servises()
         const x = Math.random() * (1000 + 1000) - 1000;
         const y = Math.random() * (1000 + 1000) - 1000 ;
         return(
-    {
+        {
+            from:
+            {
+                opacity:0,
+                transition:"opacity .4s ease , all 1s ease",
+                x:x,
+                y:y
+            },
+            to:
+            {
+                opacity:isVisiable? 1:0,
+                x: isVisiable? 0:x,
+                y: isVisiable? 0:y,
+            }
+    })}));
+
+    const titleAnim = useSpring({
        from:
        {
+           transition:"opacity .7s ease, all .4s ease",
            opacity:0,
-           transition:"opacity .01s ease , all 2s ease",
-           x:x,
-           y:y
+           y:20
        },
        to:
        {
-        opacity:isVisiable? 1:0,
-        x: isVisiable? 0:x,
-        y: isVisiable? 0:y,
+            opacity:isVisiable? 1:0,
+            y:isVisiable?0:20
        }
-    })}));
+    });
 
-
-    
     return(
         <div className={mainClassName}>
-            <h2>Our Servises</h2>
+            <animated.h2 style={titleAnim}>Our Servises</animated.h2>
             <div className="block-container">
             { shuffleItems.map((prop,item) =>
             {
