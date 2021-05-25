@@ -1,10 +1,13 @@
 
+
 .footer
 {
     display: grid;
     grid-template-areas: "logo logo tags other other";
     padding: 130px 10%;
     border-top: 2px solid $ligth-grey;
+    // animation: fadeIN 2s 200ms ease;
+    z-index: 1000;
 
     .logo
     {

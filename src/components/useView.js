@@ -13,7 +13,6 @@ export default function useView(className,offset = 300)
         if( element.offsetTop < window.pageYOffset-offset)
         {
             setState(true);
-            console.log(className);
         }
     }
 

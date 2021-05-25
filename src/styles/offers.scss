@@ -35,6 +35,7 @@
         grid-template-columns: repeat(3,$container-width);
         flex-direction: row;
         gap:50px;
+        overflow: hidden;
         .offer-frame
         {   
             display: flex;

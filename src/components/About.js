@@ -130,7 +130,7 @@ function Servises()
             from:
             {
                 opacity:0,
-                transition:"opacity .1s ease , all 1s ease",
+                transition:"opacity .1s ease , all .7s ease-out",
                 x:x,
                 y:y
             },

@@ -17,13 +17,10 @@ function Footer()
     const mainClassName = "footer";
     const isVisiable = useView(mainClassName,-700);
     const fadeIn = useSpring({
-        config:
-        {
-           delay:200,
-            duration:1000
-        },
+     
         from:
         {
+            transition:"opacity 2s ease",
             opacity:0
         },
         to:

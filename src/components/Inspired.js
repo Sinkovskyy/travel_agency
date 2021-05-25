@@ -12,7 +12,7 @@ export default () =>
 
         from:
         {
-            transition:"all 1s ease",
+            transition:"all 2.5s ease",
             height:0,
             opacity:0
         },

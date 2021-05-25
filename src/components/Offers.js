@@ -2,8 +2,8 @@ import ApartmentsData from "../data/offers.json";
 import {AiOutlineLeft as Left,AiOutlineRight as Right} from "react-icons/ai";
 import {useState} from "react";
 import Map from './Map';
-
-
+import useView from "./useView";
+import {useSpring,useSprings,animated} from "react-spring";
 
 function InfoBar(props)
 {
@@ -52,7 +52,7 @@ function OfferFrame(props)
 
 
     return(
-        <div className="offer-frame"> 
+        <animated.div className="offer-frame" style={props.style}> 
             <div className="image-container">
                 <img src={props.images[imageIndex]}/>
                 <div className="layer"></div>
@@ -63,7 +63,7 @@ function OfferFrame(props)
             </div>
             <h3>{props.title}</h3>
             <h4>${props.price }\PER NIGHT</h4>
-        </div>
+        </animated.div>
     );
 
 }
@@ -71,20 +71,82 @@ function OfferFrame(props)
 
 function Offers()
 {
-    
+    const mainClassName = "offers";
+    const isVisiable = useView(mainClassName,-400);
+    const framesEffect = useSprings(Object.keys(ApartmentsData).length,
+    Object.keys(ApartmentsData).map((item) => {
+        
+        if(parseInt(item) % 2 == 0)
+        {
+            const side = parseInt(item) % 2 ? -1200:1200;
+            return(
+                {
+                    config:
+                    {   
+                        duration: 1000 + parseInt(item)*250
+                    },
+                    from:
+                    {
+                        x: side,
+                        position:"absolute",
+                    },
+                    to:
+                    {
+                        position:isVisiable?"relative":"absolute",
+                        x: isVisiable ? 0: side,
+                        
+                    }
+                }
+            );
+        }
+        
+        return(
+            {
+                config:
+                {   
+                    duration: 1000
+                },
+                from:
+                {
+                    opacity:0,
+                },
+                to:
+                {
+                    opacity:isVisiable?1:0,
+                    
+                }
+            }  
+        );
+        
+    }));
 
+
+    const fadeIn = useSpring(
+    {
+        from:
+       {
+            opacity:0,
+            transition:"opacity 2s ease"
+        },
+        to:
+        {
+            opacity:isVisiable?1:0
+        }
+    });
     return(
         <>
-        <div className="offers" >
-            <h2>Hotels & Apartments</h2>
-            <p>On Bali there are so many variety of dwelling for everyone tastes.
-             So if you want something exsotic be sure 
-             that on Bali you will find what you are looking!</p>
+        <div className={mainClassName} >
+            <animated.div style={fadeIn}>
+                <h2>Hotels & Apartments</h2>
+                <p>On Bali there are so many variety of dwelling for everyone tastes.
+                So if you want something exsotic be sure 
+                that on Bali you will find what you are looking!</p>
+             </animated.div>
             <div className="offer-frames">
-                {Object.keys(ApartmentsData).map(i => 
+                {framesEffect.map((style,i) => 
                 {
                     return(
-                        <OfferFrame  key={i} title={ApartmentsData[i].title}
+                        <OfferFrame style={style}  key={i} title={ApartmentsData[i].title}
                              price={ApartmentsData[i].price} 
                              images={ApartmentsData[i].images} />
                         
