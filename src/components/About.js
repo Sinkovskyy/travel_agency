@@ -61,12 +61,14 @@ function Discover()
             },
             from:
             {
+             position:"absolute",   
              transition: "opacity 1s linear",
              x:400,
              opacity:0
             },
             to:
             {
+                position:"relative",   
                 opacity: isScrolled ? 1:0,
                 x:isScrolled ? 0: 400,
             }
