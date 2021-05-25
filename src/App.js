@@ -17,11 +17,11 @@ function App() {
         <About/>
         <Inspired/>
         <Offers/>
+        <Footer/>
       </main>
-      <footer>
-       <Footer/>
-      </footer>
       <UpButton/>
+      
+      
     </div>
   );
 }

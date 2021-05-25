@@ -13,12 +13,14 @@ export default function useView(className,offset = 300)
         if( element.offsetTop < window.pageYOffset-offset)
         {
             setState(true);
+            console.log(className);
         }
     }
 
     useEffect(() =>
     {
         window.addEventListener('scroll', handleScroll);
+        if(state ) window.removeEventListener('scroll', handleScroll);
         return(() =>  {window.removeEventListener('scroll', handleScroll)});
     });
 

@@ -22,6 +22,7 @@
     -ms-box-sizing: border-box !important;
     box-sizing: border-box !important;
     position: relative;
+    
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
@@ -32,6 +33,10 @@
                                     supported by Chrome, Edge, Opera and Firefox */
 }
 
+body
+{
+  overflow-x:hidden; 
+}
 
 //Header
 @import 'header';
