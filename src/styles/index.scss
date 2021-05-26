@@ -22,7 +22,6 @@
     -ms-box-sizing: border-box !important;
     box-sizing: border-box !important;
     position: relative;
-    
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
@@ -36,6 +35,11 @@
 body
 {
   overflow-x:hidden; 
+}
+
+.App
+{
+  overflow-x: hidden;
 }
 
 //Header
