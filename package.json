@@ -1,8 +1,8 @@
 {
-  "homepage":"http://Sinkovskyy.github.io/travel_agency",
+  "homepage":"http://sinkovskyy.github.io/travel_agency",
   "name": "travel_agency",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
