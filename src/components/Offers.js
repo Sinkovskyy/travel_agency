@@ -89,11 +89,14 @@ function Offers()
                     {
                         x: side,
                         position:"absolute",
+                        opacity:0,
+                        transition: "opacity 0.1s ease"
                     },
                     to:
                     {
                         position:isVisiable?"relative":"absolute",
                         x: isVisiable ? 0: side,
+                        opacity: isVisiable ? 1:0
                         
                     }
                 }

@@ -2,7 +2,7 @@ import {useState,useEffect} from 'react'
 import Sidebar from './Sidebar';
 import NavItemsData from "../data/navigator.json"
 import {HiMenu as IconMenu} from 'react-icons/hi'
-
+import {useSpring,animated} from "react-spring";
 
 
 
@@ -13,12 +13,22 @@ import {HiMenu as IconMenu} from 'react-icons/hi'
 function Navbar()
 {
 
-    
-    const [position,setPosition] = useState('navbar');
+    const mainClassName = "navbar";
+    const [position,setPosition] = useState(mainClassName);
 
     const [items,setItems] = useState(Object.keys(NavItemsData).map((item) => NavItemsData[item]));
     const [sidebarActive,setSidebarActive] = useState(false);
 
+    const fadeIn = useSpring({
+        from:
+        {
+            opacity:0
+        },
+        to:
+        {
+            opacity:1
+        }
+    })
 
 
     function getCurrentSectionName()
@@ -98,28 +108,28 @@ function Navbar()
     }
 
     return(
-        <>
-    <div className={position}>
-        <div className='logo'>FAST TRAVEL</div>
-        <div className="nav-items">
+    <animated.div  style={fadeIn}>
+        <div className={position}>
+            <div className='logo'>FAST TRAVEL</div>
+            <div className="nav-items">
+                {items.map((item,key) =>
+                {
+                    const class_name = item.active ? 'nav-item active':'nav-item';
+                    return <animated.a style={fadeIn} className={class_name} key={key} onClick={handleItemClick}>{item.name}</animated.a>
+                })}
+            </div>
+            <div className="icon-menu-wrapper">
+                <IconMenu className="icon-menu" size={37} onClick={clickSidebarHandler}/>
+            </div>
+        </div>
+        <Sidebar isActive={sidebarActive}>
             {items.map((item,key) =>
-            {
-                const class_name = item.active ? 'nav-item active':'nav-item';
-                return <a className={class_name} key={key} onClick={handleItemClick}>{item.name}</a>
-            })}
-        </div>
-        <div className="icon-menu-wrapper">
-            <IconMenu className="icon-menu" size={37} onClick={clickSidebarHandler}/>
-        </div>
-    </div>
-    <Sidebar isActive={sidebarActive}>
-        {items.map((item,key) =>
-            {
-                const class_name = item.active ? 'nav-item active':'nav-item';
-                return <a className={class_name} key={key} onClick={handleItemClick}>{item.name}</a>
-            })}
-    </Sidebar>
-    </>
+                {
+                    const class_name = item.active ? 'nav-item active':'nav-item';
+                    return <a className={class_name} key={key} onClick={handleItemClick}>{item.name}</a>
+                })}
+        </Sidebar>
+    </animated.div>
     );
 }
 
