@@ -65,7 +65,7 @@ $header_size: 70px;
             color: $white;
             margin-right: 10%;
             cursor: pointer;
-            transition: all 1s ease;
+            transition: all .4s linear;
         }
 
         @include activeColor($main-color);

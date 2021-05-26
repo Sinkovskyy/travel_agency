@@ -20,7 +20,7 @@ function Footer()
      
         from:
         {
-            transition:"opacity 2s ease",
+            transition:"opacity 1.5s ease",
             opacity:0
         },
         to:
@@ -28,6 +28,21 @@ function Footer()
             opacity:isVisiable?1:0
         },
     });
+
+    const fromUpEffect = useSpring({
+        from:
+        {
+            y:-50
+        },
+        to:
+        {
+            y: isVisiable ? 0:-50
+        },
+        config:
+        {
+            duration:700,
+        }
+    })
 
 
 
@@ -51,17 +66,17 @@ function Footer()
 
     return(
      <animated.div style={fadeIn} className={mainClassName}>
-            <div className='logo'>FAST TRAVEL</div>
-            <div className="nav-items">
+            <animated.div style={fromUpEffect} className='logo'>FAST TRAVEL</animated.div>
+            <animated.div style={fromUpEffect} className="nav-items">
                 <div className="container">
             {Object.keys(NavItemsData).map((item) =>
             {
                 return <a className="nav-item" onClick={clickHandler} key={item}>{NavItemsData[item].name}</a>
             })}
                 </div>
-            </div>
+            </animated.div>
 
-            <div className="other">
+            <animated.div style={fromUpEffect} className="other">
                 <div className="social-media-tags">
                     <Facebook className="facebook icon" size={ICON_SIZE} />
                     <Instagram className="instagram icon" size={ICON_SIZE} />
@@ -69,7 +84,7 @@ function Footer()
                     <Linkedin className="linkedin icon" size={ICON_SIZE} />
                 </div>
                 <div className="license">©2021 Fast Travel. All rights reserved</div>
-            </div>
+            </animated.div>
      </animated.div>
 
     );

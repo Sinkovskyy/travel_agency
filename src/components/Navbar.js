@@ -20,12 +20,18 @@ function Navbar()
     const [sidebarActive,setSidebarActive] = useState(false);
 
     const fadeIn = useSpring({
+        config:
+        {
+            duration:700
+        },
         from:
         {
+            y:-20,
             opacity:0
         },
         to:
         {
+            y:0,
             opacity:1
         }
     })
@@ -108,8 +114,8 @@ function Navbar()
     }
 
     return(
-    <animated.div  style={fadeIn}>
-        <div className={position}>
+    < >
+        <animated.div style={fadeIn} className={position}>
             <div className='logo'>FAST TRAVEL</div>
             <div className="nav-items">
                 {items.map((item,key) =>
@@ -121,7 +127,7 @@ function Navbar()
             <div className="icon-menu-wrapper">
                 <IconMenu className="icon-menu" size={37} onClick={clickSidebarHandler}/>
             </div>
-        </div>
+        </animated.div>
         <Sidebar isActive={sidebarActive}>
             {items.map((item,key) =>
                 {
@@ -129,7 +135,7 @@ function Navbar()
                     return <a className={class_name} key={key} onClick={handleItemClick}>{item.name}</a>
                 })}
         </Sidebar>
-    </animated.div>
+    </>
     );
 }
 

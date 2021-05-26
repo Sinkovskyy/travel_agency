@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import data from '../data/images.json'
-
+import {Spring,animated} from "react-spring"
 
 // generate images 
 function* image_generator()
@@ -55,14 +55,24 @@ class Slidebar extends React.Component
         
 
         return(
-            <div className='sliderbar' 
-            style={{backgroundImage: `url(${this.state.image})`}}>
-            <div className='content'>
-                <h1>BALI ISLAND</h1>
-                <p>You’ll always have fascinating places to be and friendly people to see.</p>
-                <button>Starting from just $399</button>
-            </div>
-            </div>
+            <Spring
+            config={{duration:1000}}
+            from={{opacity:0}}
+            to={{opacity:1}}
+            >
+            { styles => 
+            (
+                <div className='sliderbar' 
+                style={{backgroundImage: `url(${this.state.image})`}}>
+                <animated.div style={styles} className='content'>
+                    <h1>BALI ISLAND</h1>
+                    <p>You’ll always have fascinating places to be and friendly people to see.</p>
+                    <button>Starting from just $399</button>
+                </animated.div>
+                </div>
+            )
+            }
+            </Spring>
         );
     }
 }
