@@ -3,7 +3,8 @@
 
 .about
 {
-
+    display: flex;
+    flex-direction: column;
     // Dicover container
     .discover
     {
@@ -36,14 +37,13 @@
             justify-content: flex-start;
             padding-left: 50px;
             width: 550px;
-            height: 400px;
             align-self: center;
-            padding-top: 50px;
+  
 
 
             h2
             {
-                margin-top: 20px;
+            
                 font-size: 29pt;
                 margin-bottom: 25px;  
             }
@@ -312,9 +312,9 @@
        {
         .discover
         {
-            grid-template-columns: 100%;
-            grid-template-rows: 400px 400px;
+            grid-template-columns: 80%;
             justify-items: center;
+            justify-content: center;
             
 
                 // Image container
@@ -324,7 +324,8 @@
                     img
                     {
                         height:100%;
-                        max-width: 100%;
+                        max-width: 80%;
+                        margin:0 auto;
                     }
                 }
 
@@ -332,12 +333,13 @@
             .info
             {
                 padding-left: 0;
-                width: 80%;
+                width: 100%;
             
 
 
                 h2
                 {
+                    margin-top: 50px;
                     font-size: 25pt;
                     margin-bottom: 25px;
                 }
