@@ -2,18 +2,46 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
 import {Icon} from 'leaflet';
-
-
+import {useState,useEffect} from "react";
 // import 'leaflet/dist/leaflet.css';
 function Map()
 {
- 
+
+    const [resize,setResize] = useState(isPCResolution());
+
+    function isPCResolution()
+    {
+        const size = 800;
+        if(window.innerWidth > size)
+        {
+            return true;
+        }
+        return false;
+    }
+
+
+    function handleResize()
+    {
+        setResize(isPCResolution());
+    }
+
+
+    useEffect(() => {
+        
+        window.addEventListener("resize",handleResize)
+
+        return () => {
+            window.removeEventListener("resize",handleResize);
+        }
+    });
+
     return(
         <MapContainer 
         center={[-8.409518, 115.188919]} 
         zoom={9} 
         scrollWheelZoom={false}
-        dragging={true}
+        key={resize}
+        dragging={resize}
         >
             <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
