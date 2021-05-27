@@ -18,7 +18,7 @@ function* image_generator()
 class Slidebar extends React.Component
 {
 
-    slider_time = 7000;
+    slider_time = 5000;
     constructor(props)
     {
         super(props);
